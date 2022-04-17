@@ -1,0 +1,98 @@
+.repo {
+  width: 20%;
+  margin: 0px 25px 40px 25px;
+  display: flex;
+  border-radius: 7px;
+  background-color: rgb(255, 255, 255);
+  flex-direction: column;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  padding-bottom: 10px;
+  overflow: hidden;
+  transition: all 0.2s linear;
+}
+
+.repoImg {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 7px;
+  margin-bottom: 0px;
+  transition: all 0.2s linear;
+}
+.repo:hover {
+  transform: scale(1.2);
+}
+
+.repoInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.repoTitle {
+  font-size: 17px;
+  font-weight: 900;
+  margin-top: 5px;
+  color: rgb(94, 94, 94);
+  cursor: pointer;
+  text-align: center;
+  font-family: "Assistant", sans-serif;
+  padding: 0px 4px 0px 4px;
+}
+
+.repoDesc {
+  padding: 0px 10px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(80, 80, 80);
+  /* text-align: center; */
+  margin-top: 15px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  transition: all 0.2s linear;
+}
+
+.repoDesc:hover {
+  -webkit-line-clamp: 15;
+}
+.repoDesc .repoOwner,
+.repoStarsCount,
+.numberOfForks,
+.language {
+  padding: 0px 10px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgb(80, 80, 80);
+  text-align: center;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 968px) {
+  .repo {
+    display: block;
+    padding-left: 10%;
+    padding-right: 20%;
+    width: 100%;
+    align-items: center;
+  }
+
+  .repoTitle {
+    margin-left: 30%;
+    width: 100%;
+  }
+
+  .repoImg {
+    margin-left: 30%;
+  }
+}
